@@ -42,8 +42,8 @@ Each entry in `dailyData` is a single-element array containing the GB used for t
 
 | Date       | Data Usage |
 |------------|------------|
-| 2025-11-17 | 1.23 GB    |
-| 2025-11-18 | 4.56 GB    |
+| 2026-06-17 | 0.00 GB    |
+| 2026-06-18 | 0.00 GB    |
 
 ## Configuration
 
