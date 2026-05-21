@@ -20,26 +20,19 @@ python starlink_parser.py
 
 3. A file named `starlink_daily_usage.csv` will be created in the same directory.
 
-## Input Format
+## Getting the JSON File
 
-The script expects a JSON file with the following structure:
+The input file is captured directly from the Starlink account portal using your browser's developer tools.
 
-```json
-{
-  "content": {
-    "billingCyclesAnnotated": [
-      {
-        "startDate": "2025-11-17T00:00:00Z",
-        "dailyData": [
-          [1.23],
-          [4.56],
-          ...
-        ]
-      }
-    ]
-  }
-}
-```
+1. Navigate to the **Subscription** section of your [Starlink account portal](https://www.starlink.com/account).
+
+2. Right-click anywhere on the page and select **Inspect**.
+
+3. Click the **Network** tab in the Developer Tools panel, then select the **Fetch/XHR** filter.
+
+4. Refresh the page, then look through the listed requests for one containing the `annotated` data structure. Click it and open the **Response** tab — copy the entire text.
+
+5. In your project folder, create a new file named `starlink_data.json` and paste the copied response into it.
 
 Each entry in `dailyData` is a single-element array containing the GB used for that day, offset from `startDate`.
 
