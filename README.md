@@ -30,9 +30,14 @@ The input file is captured directly from the Starlink account portal using your 
 
 3. Click the **Network** tab in the Developer Tools panel, then select the **Fetch/XHR** filter.
 
-4. Refresh the page, then look through the listed requests for one containing the `annotated` data structure. Click it and open the **Response** tab — copy the entire text.
+4. Refresh the page, then look through the listed requests for one containing the `annotated` data structure. Right click the **Response** tab and save as a new file named `starlink_data.json`.
+
+*(IF NOT USING CHROME SEE BELOW)*
+
+4. Refresh the page, then look through the listed requests for one containing the `annotated` data structure. Right click the **Response** tab — copy the entire text.
 
 5. In your project folder, create a new file named `starlink_data.json` and paste the copied response into it.
+
 
 Each entry in `dailyData` is a single-element array containing the GB used for that day, offset from `startDate`.
 
